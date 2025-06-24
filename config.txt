@@ -1,0 +1,42 @@
+[AWS Access] 
+AWS_ACCESS_KEY_ID = 
+AWS_SECRET_ACCESS_KEY = 
+
+[HIT Configuration]
+title = Navigation Task
+description = Navigate through an environment and learn the shortest route as you can
+amt_keywords = Psychology, Memory
+lifetime = 24
+us_only = true
+approve_requirement = 95
+contact_email_on_error = elz13@scarletmail.rutgers.edu
+ad_group = Serial Recall Experiment
+psiturk_keywords = memory
+organization_name = Rutgers University
+browser_exclude_rule = mobile, tablet, bot, MSIE
+allow_repeats = false
+
+[Database Parameters]
+database_url = 
+table_name = turkdemo
+
+[Server Parameters]
+host = 0.0.0.0
+port = 22362
+cutoff_time = 120
+logfile = server.log
+loglevel = 1
+debug = true
+login_username = elz13
+login_pw = 
+threads = 1
+
+[Task Parameters]
+experiment_code_version = 1.0
+num_conds = 1
+num_counters = 1
+
+[Shell Parameters]
+launch_in_sandbox_mode = true
+#ad_location = 
+#use_psiturk_ad_server = false

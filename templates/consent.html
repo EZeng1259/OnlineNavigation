@@ -1,0 +1,92 @@
+{% extends 'layouts/layout.html' %}
+<!--
+  The consent.html displays the text of your IRB-approved
+  consent form.  Even if you are not required to provide
+  a consent form, it is helpful to use this form to
+  describe what people can do if an error comes up, etc...
+
+-->
+{% block head %}
+    {{ super() }}
+    <meta charset="utf-8" />
+    <title>Psychology Experiment - Informed Consent Form</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css" />
+    <link rel="icon" href="/static/favicon.ico" />
+    <script type="text/javascript">
+        function onexit() {
+          self.close(); // no harm, no foul here
+        }
+    </script>
+		<style>
+			@media print {
+				body * {
+					visibility: hidden;
+				}
+				.legal, .legal * {
+					visibility: visible;
+				}
+				.legal {
+					position: absolute;
+					left: 0;
+					top: 0;
+					overflow:visible;
+				}
+			}
+		</style>
+    {% endblock %}
+{% block body %}
+        <div id="container-consent">
+            <div id="consent">
+                <h1>We need your consent to proceed</h1>
+                <hr />
+                <div class="legal well">
+
+                    <p>
+                      <div class="scroll-container"></div>
+                      <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Adult Consent Template</title><meta name="author" content="Office of Human Subjects Protection"/><meta name="keywords" content="consent; adult"/><meta name="description" content="Consent"/><style type="text/css"> * {margin:0; padding:0; text-indent:0; }
+                      h3 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+                      .s1 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+                      .s2 { color: #212121; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+                      h1 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 16pt; }
+                      h2 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10pt; }
+                      .p, p { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10pt; margin:0pt; }
+                      .a, a { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10pt; }
+                      .s3 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 12pt; }
+                      .s5 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 11pt; }
+                      .s6 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 11pt; }
+                      li {display: block; }
+                      #l1 {padding-left: 0pt; }
+                      #l1> li>*:first-child:before {content: "• "; color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10pt; }
+                      </style></head><body><p style="text-indent: 0pt;text-align: left;"><span><img width="255" height="180" alt="image" src="{{ server_location }}/static/images/university.jpg"/></span></p><h3 style="padding-top: 5pt;padding-left: 396pt;text-indent: 0pt;line-height: 128%;text-align: left;">Psychology Department <span class="s1">School of Arts and Sciences </span><span class="s2">152 Frelinghuysen Rd, Piscataway Township,</span></h3><p class="s2" style="padding-left: 396pt;text-indent: 0pt;line-height: 9pt;text-align: left;">NJ 08854</p><p style="text-indent: 0pt;text-align: left;"><br/></p><h1 style="padding-left: 25pt;text-indent: 0pt;text-align: center;">CONSENT TO TAKE PART IN A RESEARCH STUDY</h1><h2 style="padding-top: 11pt;padding-left: 33pt;text-indent: 0pt;line-height: 11pt;text-align: left;">Title of Study: <span class="p">Towards a unified account of spatial and episodic memory</span></h2><h2 style="padding-left: 33pt;text-indent: 0pt;line-height: 11pt;text-align: left;">Principal Investigators: <span class="p">Qiong Zhang, Ph.D., Chuanxiuyue He, Ph.D.</span></h2><p style="padding-top: 11pt;padding-left: 33pt;text-indent: 0pt;text-align: left;">The information in this consent form will provide more details about the research study and what will be asked of you if you choose to take part in it. If you have any questions now or during the study, if you choose to take part, you should feel free to ask them and should expect to be given answers you completely understand. After your questions have been answered and you wish to take part in the research study, you will be asked to sign this consent form. You are not giving up any of your legal rights by agreeing to take part in this research or by signing this consent form.</p><h2 style="padding-top: 11pt;padding-left: 33pt;text-indent: 0pt;line-height: 11pt;text-align: left;">Who is conducting this study?</h2><p style="padding-left: 33pt;text-indent: 0pt;text-align: left;">Dr. Qiong Zhang and Dr. Chuanxiuyue He are the Principal Investigators of this research study. A Principal Investigator has the overall responsibility for the conduct of the research. However, there are often other individuals who are part of the research team. Chuanxiuyue (Carol) He and Qiong Zhang may be reached at </a>mol@psych.rutgers.edu or by mail at 152 Frelinghuysen Rd, Piscataway, NJ 08854.</p><h2 style="padding-top: 10pt;padding-left: 33pt;text-indent: 0pt;line-height: 11pt;text-align: left;">Why is this study being done?</h2><p style="padding-left: 33pt;text-indent: 0pt;text-align: left;">The purpose of this study is to understand human memory and how people move around in a virtual environment to memorize the information in their environments.</p><h2 style="padding-top: 10pt;padding-left: 33pt;text-indent: 0pt;line-height: 11pt;text-align: left;">Who may take part in this study and who may not?</h2><p style="padding-left: 33pt;text-indent: 0pt;line-height: 11pt;text-align: left;">Adults older than 18 may take part in this study.</p><h2 style="padding-top: 10pt;padding-left: 33pt;text-indent: 0pt;line-height: 11pt;text-align: left;">Why have I been asked to take part in this study?</h2><p style="padding-left: 33pt;text-indent: 0pt;line-height: 11pt;text-align: left;">You have volunteered to take part in this study.</p><h2 style="padding-top: 10pt;padding-left: 33pt;text-indent: 0pt;line-height: 11pt;text-align: left;">How long will the study take and how many subjects will take part?</h2><p style="padding-left: 33pt;text-indent: 0pt;line-height: 11pt;text-align: left;">This study will take about 1 hour. Approximately 500 participants will take part in this study</p><h2 style="padding-top: 10pt;padding-left: 33pt;text-indent: 0pt;line-height: 11pt;text-align: left;">What will I be asked to do if I take part in this study?</h2><p style="padding-left: 33pt;text-indent: 0pt;text-align: left;">You will be asked to navigate around a virtual environment to memorize information. You will also fill out some surveys at the end.</p><h2 style="padding-top: 10pt;padding-left: 33pt;text-indent: 0pt;line-height: 11pt;text-align: left;">What are the risks of harm or discomforts I might experience if I take part in this study?</h2><p style="padding-left: 33pt;text-indent: 0pt;text-align: left;">The risks of this study are minimal. You may experience mental fatigue. There is a very small risk that you could begin to experience one or more of the symptoms of &quot;cybersickness&quot; (similar to motion sickness): disorientation, dizziness, disturbance of hand-eye coordination, eyestrain, headache, lightheadedness, nausea, and sweating. If you have any of these symptoms, it is possible that one or more of these could last for some time after participation. In rare cases, the aftereffects could last for hours. When you are participating, if there is any change in the way you are feeling, let the experimenter know immediately and he/she will end the experiment. We will ask you to remain in the experimental room until any side-effects have subsided. If you experience any lasting symptoms or have other comments to make, please contact PIs. If you are not feeling well (have a cold, nausea, or dizziness) before beginning your participation, we ask that you not participate. The chance of these risks should be rare; less than 1 in 10 participants should experience them. As long as you do not insist on attempting the task while not feeling well, we do not anticipate anyone will experience hours aftereffects.</p><h2 style="padding-top: 11pt;padding-left: 33pt;text-indent: 0pt;line-height: 11pt;text-align: left;">Are There Any Benefits To Me If I Choose To Take Part In This Study?</h2><p style="padding-left: 33pt;text-indent: 0pt;text-align: left;">Potential benefits of participating may be of a general scientific nature, and you might develop an interest in the research itself. By contributing to our knowledge of memory, this research will benefit society by helping understand the memory process. Please note that the data collected is purely for research</p><p style="padding-left: 5pt;text-indent: 0pt;text-align: left;"></p><p style="padding-top: 6pt;padding-left: 33pt;text-indent: 0pt;text-align: left;">purposes and does not hold clinical or diagnostic value. However, it is possible that you may not receive any direct benefit from taking part in this study.</p><h2 style="padding-top: 10pt;padding-left: 33pt;text-indent: 0pt;line-height: 11pt;text-align: left;">What Are My Alternatives If I Do Not Want To Take Part In This Study?</h2><p style="padding-left: 33pt;text-indent: 0pt;line-height: 11pt;text-align: left;">Your alternative is not to take part in this study.</p><h3 style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;line-height: 128%;text-align: left;"></p><h2 style="padding-top: 11pt;padding-left: 33pt;text-indent: 0pt;text-align: left;">How Will I Know If New Information Is Learned That May Affect Whether I Am Willing To Stay In The Study?</h2><p style="padding-left: 33pt;text-indent: 0pt;text-align: left;">During the study, you will be updated about any new information that may affect whether you are willing to continue taking part in the study. If new information is learned that may affect you after the study or your follow-up is completed, you will be contacted.</p><h2 style="padding-top: 11pt;padding-left: 33pt;text-indent: 0pt;line-height: 11pt;text-align: left;">Will There Be Any Cost To Me To Take Part In This Study?</h2><p style="padding-left: 33pt;text-indent: 0pt;line-height: 11pt;text-align: left;">Other than your time, there is no cost for you to take part in this study.</p><h2 style="padding-top: 11pt;padding-left: 33pt;text-indent: 0pt;line-height: 11pt;text-align: left;">Will I Be Paid To Take Part In This Study?</h2><p style="padding-left: 33pt;text-indent: 0pt;text-align: left;">You will receive either 1.5 subject pool credit per half hour or $2.50 per 15 minutes for your participation incrementally. It will be capped at 3 credits or $10.00 (i.e., one hour of participation). Based on how well you memorize the information, you may be provided with additional money as well. You will get 1 bonus point for information correctly recalled. Each point is worth $0.02 as a prize. It will be rounded up to $0.25. You can earn up to a $1.25 bonus. You will not lose points for incorrect recall.</p><h2 style="padding-top: 11pt;padding-left: 33pt;text-indent: 0pt;line-height: 11pt;text-align: left;">How Will Information About Me Be Kept Private Or Confidential?</h2><p style="padding-left: 33pt;text-indent: 0pt;text-align: left;">All efforts will be made to keep your personal information in your research record confidential, but total confidentiality cannot be guaranteed. We will not collect any data about you that could lead to your identification. All data will be securely stored and handled only by trained personnel.</p><p style="padding-top: 10pt;padding-left: 33pt;text-indent: 0pt;text-align: left;">The research team may use or share your information collected or created for this study with the following people and institutions:</p><ul id="l1"><li data-list-text="•"><p style="padding-left: 47pt;text-indent: -14pt;text-align: left;">The Rutgers University Institutional Review Board and Compliance Boards</p></li><li data-list-text="•"><p style="padding-left: 47pt;text-indent: -14pt;text-align: left;">The Office for Human Research Protections in the U.S. Dept. of Health and Human Services</p></li></ul><p style="padding-top: 3pt;text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 33pt;text-indent: 0pt;text-align: left;">No information that can identify you will appear in any professional presentation or publication.</p><h2 style="padding-top: 10pt;padding-left: 33pt;text-indent: 0pt;line-height: 11pt;text-align: left;">What will happen to my information collected for this research after the study is over?</h2><p style="padding-left: 33pt;text-indent: 0pt;text-align: left;">After information that could identify you has been removed, de-identified information collected for this research may be used for other research we conduct without obtaining additional informed consent from you.</p><h2 style="padding-top: 11pt;padding-left: 33pt;text-indent: 0pt;text-align: left;">What Will Happen If I Do Not Wish To Take Part In The Study Or If I Later Decide Not To Stay In The Study?</h2><p style="padding-left: 33pt;text-indent: 0pt;text-align: left;">It is your choice whether to take part in the research. You may choose to take part, not to take part or you may change your mind and withdraw from the study at any time. If you do not want to enter the study or decide to stop taking part, your relationship with the study staff will not change, and you may do so without penalty and without loss of benefits to which you are otherwise entitled.</p><p style="padding-top: 11pt;padding-left: 33pt;text-indent: 0pt;text-align: left;">Any data that has already been collected cannot be withdrawn because there may not be any identifiers to link the data with you.</p><h2 style="padding-top: 10pt;padding-left: 33pt;text-indent: 0pt;line-height: 11pt;text-align: left;">Who Can I Contact If I Have Questions?</h2><p style="padding-left: 33pt;text-indent: 0pt;text-align: left;"><a class="a" target="_blank">If you have questions, concerns or complaints about the research, wish more information, you can contact the Principal Investigators: Qiong Zhang, Chuanxiuyue He, </a><a mailto:mol@psych.rutgers.edu target="_blank">mol@psych.rutgers.edu.</a></p><p style="padding-left: 5pt;text-indent: 0pt;text-align: left;"><span><p style="padding-top: 6pt;padding-left: 33pt;text-indent: 0pt;text-align: left;">If you have questions, concerns, problems, information or input about the research or would like to know about your rights as a research subject, you can contact the Rutgers IRB Director at: Arts and Sciences IRB, 335 George St., Liberty Plaza Ste. 3200, New Brunswick, NJ 08901 (732) 235-2866 or the Rutgers Human Subjects Protection Program at (973)972- 3608 or (732)235-9806, email us at </a>IRBOffice@research.rutgers.edu <span class="p">or write us at 335 George Street, Liberty Plaza Suite 3200, New Brunswick, NJ 08901.</span></p><p style="text-indent: 0pt;text-align: left;"><br/></p><p class="s6" style="padding-left: 33pt;text-indent: 0pt;text-align: justify;">By beginning this research, you acknowledge that you are 18 years of age or older, have read the information and agree to take part in the research, with the knowledge that you are free to withdraw your participation without penalty.</p></body></html>
+                      </div>
+                    </p>
+
+                    <button type="button" class="btn btn-default btn-sm" onClick="window.print();">
+                    <span class="glyphicon glyphicon-print"></span> Print a copy of this
+                    </button>
+                </div>
+
+                <hr />
+                <h4>Do you understand and consent to these terms?</h4>
+                <br />
+
+                <center>
+                    <button type="button" class="btn btn-primary btn-lg" onClick="window.location='/exp?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}'">
+                    <span class="glyphicon glyphicon-ok"></span> I agree
+                    </button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="btn btn-danger btn-lg" onClick="onexit()">
+                    <span class="glyphicon glyphicon-ban-circle"></span> No thanks, I do not want to do this HIT
+                    </button>
+                </center>
+
+            </div>
+        </div>
+{% endblock %}
+
+
+
+

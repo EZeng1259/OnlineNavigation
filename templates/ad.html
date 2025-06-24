@@ -1,0 +1,55 @@
+{% extends 'layouts/layout.html' %}
+{% block head %}
+	{{ super() }}
+{% endblock %}
+
+{% block body %}
+
+
+
+<!--
+	The ad.html has a very specific format.
+
+	Really there are two "ads" contained within this file.
+
+	The first ad displays to participants who are browsing
+	the Amazon Mechanical Turk site but have not yet accepted
+	your hit.
+
+	The second part of the ad display after the person selected
+	"Accept HIT" on the Amazon website.  This will reload the
+	ad and will display a button which, when clicked, will pop
+	open a new browser window pointed at your local psiTurk
+	server (assuming it is running and accessible to the Internet).
+
+	See comments throughout for hints
+
+-->
+
+		<div id="container-not-an-ad" class="media">
+			<div class="media-left pull-left" href="#">
+						<!-- REPLACE THE LOGO HERE WITH YOUR  UNIVERSITY, LAB, or COMPANY -->
+						<img id="adlogo" src="{{ server_location }}/static/images/university.jpg" alt="Lab Logo" />
+			</div>
+			<div class="media-body">
+
+							<h1>Thank you for accepting!</h1>
+							<p>
+								By clicking the following button, you will be taken to the informed consent form. It will provide information on the experimental procedure, so read through it carefully. The experiment will then begin if you agree to the consent form.
+							</p>
+							<script type="text/javascript">
+								function openwindow() {
+									window.location = '{{ server_location }}/consent?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}';
+								}
+
+							</script>
+							<div class="alert alert-warning">
+								<b>Warning</b>: Please disable pop-up blockers before continuing. We recommend using Google Chrome, Internet Explorer, FireFox, or Safari for your browser.
+							</div>
+
+							<button type="button" class="btn btn-primary btn-lg" onClick="openwindow();">
+							  Begin
+							</button>
+			</div>
+		</div>
+{% endblock %}
